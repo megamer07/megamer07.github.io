@@ -1,0 +1,223 @@
+/*!
+ * Bootstrap v4.0.0 (https://getbootstrap.com)
+ * Copyright 2011-2018 The Bootstrap Authors
+ * Copyright 2011-2018 Twitter,  Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #7dce94;
+    --secondary: #3d3d3f;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: transparent;
+}
+@-ms-viewport {
+    width: device-width;
+}
+article, aside, dialog, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f3f6f8;
+}
+[tabindex="-1"]:focus {
+    outline: 0!important;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+
+/* Not important */
+.footer {
+  background: #eee;
+  height: 1000px;
+}
+
+#home{
+  font-family: sans-serif;
+
+  /*filter: gray;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+*/
+
+  padding-top: 225px;
+  padding-bottom: 225px;
+}
+
+.blue {
+  background-image:
+    linear-gradient(
+      rgba(0, 15, 200, 0.5),
+      rgba(0, 15, 200, 0.5)
+    ),
+    url("../../assets/images/home.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 80% center;
+    /*height: 100vh;*/
+}
+
+#home .section-home--content{
+  filter: brightness(100%);
+  font-weight: bold;
+  color: white;
+}
+
+#about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#about img{
+  padding-left: 50px;
+  width: 350px;
+  height: 350px;
+}
+
+
+#qualifications{
+  padding-top: 100px;
+
+}
+
+#skills{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  width: 100%;
+}
+
+#logo{
+  height: 80px;
+  width: 80px;
+}
+
+#projects{
+  padding-top: 100px;
+}
+
+#experience{
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+}
+
+#trainings{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+
+
+/* entire container, keeps perspective */
+.flip-container {s
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 250px;
+	height: 480px;
+
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+  text-align: center;
+
+}
+
+.front h2{
+  padding-top: 100px;
+}
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+  text-align: center;
+}
+
+.back h4{
+  font-size: 20px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+.back h2{
+  font-size: 20px;
+  padding-top: 30px;
+}
